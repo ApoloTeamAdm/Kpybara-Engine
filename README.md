@@ -25,7 +25,7 @@ Softwares corporativos de educação tornaram-se lentos, repletos de anúncios, 
 O **Kpybara Engine** foi construído a partir do zero para ser o oposto:
 - **100% Offline-First:** Funciona de forma autônoma sem sinal de internet.
 - **Leveza Extrema:** Consome menos de 30 MB de RAM total no app e menos de 5 MB no Core nativo.
-- **Fluidez Real:** Executa a 60/90 FPS em hardware de entrada como Moto G22, Moto G5 ou processadores Helio G37.
+- **Fluidez Real:** Executa a 60/90 FPS em hardware de entrada como Moto G22, ou processadores Helio G37.
 - **Zero Burocracia:** Dados de progresso salvos em arquivos locais abertos e fáceis de versionar.
 
 ---
