@@ -40,8 +40,13 @@ Acreditamos que a IA não substitui o rigor da engenharia de software; pelo cont
 
 ## ⚡ Diferenciais Técnicos
 
-### 1. Motor Universal em C++20 (`c_core`)
-O núcleo de avaliação de exercícios é escrito em C++20 puro compilado nativamente para ARM64/x86_64, comunicando-se com a interface Flutter via **Dart FFI**:
+### 1. Motor Universal em C++20 (`motor/`)
+O núcleo de avaliação de exercícios é escrito em C++20 puro consolidado dentro da pasta `motor/` e compilado nativamente para ARM64/x86_64, comunicando-se com a interface Flutter via **Dart FFI**:
+- **Estrutura Unificada (`motor/`):**
+  - `motor/include/`: Cabeçalhos Zero-Copy FFI (`kpybara_core.h`), Arena Allocator (`kpybara_arena.h`) e Watchdog (`kpybara_watchdog.h`).
+  - `motor/src/`: Implementação C++20 de alta performance com algoritmo Levenshtein na Arena (`kpybara_core.cpp`).
+  - `motor/dart/`: Conectores Dart FFI, Isolate Runners e Repositório Drift Offline-First.
+  - `motor/CMakeLists.txt`: Build nativo moderno multiplataforma C++20.
 - **Zero-Copy FFI:** Utiliza estruturas C compactas (`#pragma pack(push, 1)`) transmitidas diretamente por ponteiro. Nenhuma serialização JSON ou alocação intermediária de strings é realizada no caminho crítico.
 - **Arena Allocator O(1):** Pool contíguo com teto rígido de **10 MB de RAM**. Reset instantâneo em $O(1)$ ao final de cada exercício, eliminando completamente vazamentos de memória e fragmentação de heap (*zero heap churn*).
 - **Watchdog Assíncrono (< 300 ms):** Thread independente de vigilância com atômicos de interrupção garantindo que nenhum script trave o dispositivo do aluno.
@@ -106,11 +111,11 @@ git clone https://github.com/kpybara-engine/kpybara-engine.git
 cd kpybara-engine
 ```
 
-### 2. Compilar a Biblioteca Nativa C++ (`c_core`)
+### 2. Compilar a Biblioteca Nativa C++ (`motor/`)
 
 #### Linux / macOS:
 ```bash
-mkdir -p c_core/build && cd c_core/build
+mkdir -p motor/build && cd motor/build
 cmake -DCMAKE_BUILD_TYPE=Release ..
 cmake --build . -j$(nproc 2>/dev/null || sysctl -n hw.ncpu)
 cd ../..
