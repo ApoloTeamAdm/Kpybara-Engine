@@ -1,0 +1,6 @@
+{
+  "name": "CourseEngine",
+  "description": "Plataforma comunitária federada de aprendizado de idiomas com execução offline, repetição espaçada (SRS), árvore adaptativa e IA.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
