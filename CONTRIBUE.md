@@ -67,3 +67,11 @@ Para manter o motor estável e leve no hardware alvo (ex: Moto G22 / 2 GB RAM):
    git checkout -b feature/minha-nova-funcionalidade
    # ou
    git checkout -b fix/correcao-de-bug
+
+   ## 📁 Estrutura do Código-Fonte
+
+Toda a lógica principal do **Kpybara Engine** está organizada dentro da pasta `/motor`:
+
+- **`/motor`**: Contém o código-fonte e os arquivos do motor do sistema.
+
+Se você deseja contribuir adicionando novas funcionalidades, corrigindo bugs ou otimizando a lógica da engine, edite os arquivos localizados dentro da pasta `motor/`.
