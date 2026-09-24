@@ -143,5 +143,5 @@ Consulte o arquivo [LICENSE](LICENSE) para obter o texto completo da licença.
 
 ## Esse readme mesmo é feito com ia então por favor não fique dando hate
 ## A ia foi usada pra dar o pontpé inicial e o que vale é a ideia, pois até o kernel do linux tem parte do codigo feito com ia
-## Então se você não gosta de codigo de ia contribua pra removelo, e não ficar dando hate, pois pra dar hate é um dois, mas pra contribuir neca##
+## Então se você não gosta de codigo de ia contribua pra removelo, e não ficar dando hate, pois pra dar hate é um dois, mas pra contribuir neca
 ## a origem dessa ideia é o fato de eu ter ficado de recuperção em ingles, então eu pensei em adptar a logica do Duolingo para algo de codigo aberto e feito pela comunidade, que não só ensine apenas ingles mas ensine o que a comunidade bem entender (mas com certos limetes morais e eticos) 
