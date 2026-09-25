@@ -27,6 +27,7 @@ O **Kpybara Engine** foi construído a partir do zero para ser o oposto:
 - **Leveza Extrema:** Consome menos de 30 MB de RAM total no app e menos de 5 MB no Core nativo.
 - **Fluidez Real:** Executa a 60/90 FPS em hardware de entrada como Moto G22, ou processadores Helio G37.
 - **Zero Burocracia:** Dados de progresso salvos em arquivos locais abertos e fáceis de versionar.
+- **Conhecimento é para todos** temos essa filosofia e para isso queremos que a comunidade crie os cursos que ela bem entender        (mas cursos) livres para todas as idades e para isso temos 4 níveis de verificado : não verificado quando o curso acaba de ser publicado, verificado pela comunidade, curso de autor verificado, quando o autor é super aclamado na comunidade, e verificado oficial quando os próprio administradores verificam o curso
 
 ---
 
@@ -44,7 +45,7 @@ Acreditamos que a IA não substitui o rigor da engenharia de software; pelo cont
 O núcleo de avaliação de exercícios é escrito em C++20 puro consolidado dentro da pasta `motor/` e compilado nativamente para ARM64/x86_64, comunicando-se com a interface Flutter via **Dart FFI**:
 - **Estrutura Unificada (`motor/`):**
   - `motor/include/`: Cabeçalhos Zero-Copy FFI (`kpybara_core.h`), Arena Allocator (`kpybara_arena.h`) e Watchdog (`kpybara_watchdog.h`).
-  - `motor/src/`: Implementação C++20 de alta performance com algoritmo Levenshtein na Arena (`kpybara_core.cpp`).
+  - `motor/src/`: Iplementação C++20 de alta performance com algoritmo Levenshtein na Arena (`kpybara_core.cpp`).
   - `motor/dart/`: Conectores Dart FFI, Isolate Runners e Repositório Drift Offline-First.
   - `motor/CMakeLists.txt`: Build nativo moderno multiplataforma C++20.
 - **Zero-Copy FFI:** Utiliza estruturas C compactas (`#pragma pack(push, 1)`) transmitidas diretamente por ponteiro. Nenhuma serialização JSON ou alocação intermediária de strings é realizada no caminho crítico.
